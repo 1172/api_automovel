@@ -11,8 +11,8 @@ MongoClient.connect(uri, (err, client) => {
   if (err) return console.log(err)
   db = client.db('standautomovel')
 
-  app.listen(3000, function(){
-    console.log ('A correr na porta 3000')
+  app.listen(8080, function(){
+    console.log ('A correr na porta 8080')
 })
 })
 
