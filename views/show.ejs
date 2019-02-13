@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+        <body style="background-color:lightyellow;">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabela de dados</title>
+</head>
+<style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+        }
+        th {
+          text-align: center;
+        }
+        </style>
+<body>
+
+<h2>Registos<h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Marca</td>
+                <td>Modelo</td>
+                <td>Combustivel</td>
+                <td>Ano</td>
+                <td>Cor</td>
+                <td>Preco</td>
+                <td>Ação</td>
+            </tr>
+        </thead>
+        <tbody>
+        <% data.forEach(function(details) { %>
+            <tr>
+                <td><%= details.Marca%></td>
+                <td><%= details.Modelo%></td>
+                <td><%= details.Combustivel%></td>
+                <td><%= details.Ano%></td>
+                <td><%= details.Cor%></td>
+                <td><%= details.Preco%></td>
+                <td><a href="/edit/<%= details._id %>">Editar</a> - <a href="/delete/<%= details._id %>">Eliminar</a></td>
+            </tr>     
+        <% }) %>
+        </tbody>    
+         </body>  
+         <form action ="/" method="GET"> 
+            <button class="btn btn btn-sm"> <a href="/">Voltar</a> </button> </form>
+        </table>
+    
+</html>

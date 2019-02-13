@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+        <body style="background-color:lightyellow;">
+<head>
+<title>Registo de automoveis</title>
+
+    <script src="server.js"></script>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  text-align: center;
+}
+</style>
+</head>
+
+<h2>Insira os dados do automovel</h2>
+<form action ="/show" method="POST"> 
+
+    <p><label for="Marca">Marca:</label><br>
+      <input type= "text"  placeholder="Marca" name='Marca'></p>
+      
+    <p><label for="Modelo">Modelo:</label><br>
+      <input type= "text"  placeholder="Modelo" name='Modelo'></p>
+
+    <p><label for="Combustivel">Combustivel:</label><br>
+      <input type= "text"  placeholder="Combustivel" name='Combustivel'></p>
+      
+    <p><label for="Ano">Ano:</label><br>
+      <input type= "number"  placeholder="Ano" name='Ano'></p>
+
+    <p><label for="Cor">Cor:</label><br>
+      <input type= "text"  placeholder="Cor" name='Cor'></p>
+
+    <p><label for="Preco">Preco:</label><br>
+      <input type="text"  placeholder="Preco" name="Preco"></p>
+      
+    <p><input type="submit"  value="Inserir"></p>
+
+  </form>
+  <form action ="/show" method="GET"> 
+  <button class="btn btn btn-sm"> <a href="/show">Registos</a> </button> </form>
+
+</body>
+
+</html>

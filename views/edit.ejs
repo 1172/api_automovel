@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+        <body style="background-color:lightyellow;">
+<head>
+  <meta charset="UTF-8">
+  <title>Registos de dados</title>
+  <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+        }
+        th {
+          text-align: center;
+        }
+        </style>
+</head>
+<body>
+
+    <h2>Editar Registos</h2>
+    <% data.forEach(function(details) { %>
+<form action="/edit/<%= details._id %>" method="POST">
+    <input type="text" value="<%= details.Marca%>" name="Marca">
+    <input type="text" value="<%= details.Modelo%>" name="Modelo">
+    <input type="text" value="<%= details.Combustivel%>" name="Combustivel">
+    <input type="text" value="<%= details.Ano%>" name="Ano">
+    <input type="text" value="<%= details.Cor%>" name="Cor">
+    <input type="text" value="<%= details.Preco%>" name="Preco">
+    <br />
+    <button id ="update"class="btn btn-success btn-sm" type="submit"> Update </button>
+</form>
+    <form action ="/show" method="GET"> 
+        <button class="btn btn btn-sm"> <a href="/show">Voltar</a> </button> </form>
+
+<% }) %>
+
+</body>
+</html>
